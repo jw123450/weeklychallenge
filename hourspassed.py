@@ -14,11 +14,10 @@ def hourspassed(hour1, hour2):
 	else:
 		ftime = rtime2 - rtime1
 		if ftime < 1:
-			print(ftime * 60, 'Minutes passed')
+			print(round((ftime * 60), 1), 'Minutes passed')
 		else:
 			h, m = divmod(ftime, 1)
-			h = int(h)
-			print(h, 'Hours', m * 60, 'Minutes passed')
+			print(int(h), 'Hours', round((m * 60), 1), 'Minutes passed')
 
 hourspassed("3:00 AM", "9:00 AM")
 hourspassed("2:00 PM", "4:00 PM")
