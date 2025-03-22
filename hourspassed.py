@@ -1,0 +1,28 @@
+def hourspassed(hour1, hour2):
+#	print(hour1,',', hour2)
+	time1 = str(hour1.split(' '))
+	time2 = str(hour2.split(' '))
+	rtime1 = int(time1[2]) + int(time1[4])/6 + int(time1[5])/60
+	rtime2 = int(time2[2]) + int(time2[4])/6 + int(time2[5])/60
+#	print(rtime1, rtime2)
+	if 'PM' in hour1:
+		rtime1 += 12
+	if 'PM' in hour2:
+		rtime2 += 12
+	if rtime2 == rtime1:
+		print('No time has passed')
+	else:
+		ftime = rtime2 - rtime1
+		if ftime < 1:
+			print(ftime * 60, 'Minutes passed')
+		else:
+			h, m = divmod(ftime, 1)
+			h = int(h)
+			print(h, 'Hours', m * 60, 'Minutes passed')
+
+hourspassed("3:00 AM", "9:00 AM")
+hourspassed("2:00 PM", "4:00 PM")
+hourspassed("1:00 AM", "3:00 PM")
+hourspassed("4:00 PM", "4:00 PM")
+hourspassed('2:30 AM', '5:10 PM')
+hourspassed('2:35 AM', '2:55 AM')
