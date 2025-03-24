@@ -1,10 +1,14 @@
 def hourspassed(hour1, hour2):
-#	print(hour1,',', hour2)
 	time1 = str(hour1.split(' '))
 	time2 = str(hour2.split(' '))
-	rtime1 = int(time1[2]) + int(time1[4])/6 + int(time1[5])/60
-	rtime2 = int(time2[2]) + int(time2[4])/6 + int(time2[5])/60
-#	print(rtime1, rtime2)
+	if (hour1[4] == ':'):
+		rtime1 = int(time1[2]) + int(time1[4])/6 + int(time1[5])/60
+	else:
+		rtime1 = int(time1[2]) + int(time1[3]) + int(time1[5])/6 + int(time1[6])/60
+	if (hour2[4] == ':'):
+		rtime2 = int(time2[2]) + int(time2[4])/6 + int(time2[5])/60
+	else:
+		rtime2 = int(time2[2]) + int(time2[3]) + int(time2[5])/6 + int(time2[6])/60
 	if 'PM' in hour1:
 		rtime1 += 12
 	if 'PM' in hour2:
