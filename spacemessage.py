@@ -2,8 +2,8 @@ def spaceMessage(words):
 	words = words.replace(']', '[')
 	finalstring = ''
 	w = words.split('[')
-	if '' in w:
-		w.pop()
+	while '' in w:
+		w.remove('')
 	for n in w:
 		try:
 			funny = int(n[0])
@@ -16,3 +16,4 @@ def spaceMessage(words):
 spaceMessage("ABCD")
 spaceMessage("AB[3CD]")
 spaceMessage("IF[2E]LG[5O]D")
+spaceMessage("[3]AB")
