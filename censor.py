@@ -1,8 +1,8 @@
 def censor(wordsrtring):
 	finalwords = []
-	thing = ''
 	words = wordsrtring.split(' ')
 	for word in words:
+		thing = ''
 		counterthing = len(word)
 		if counterthing > 4:
 			while counterthing > 0:
