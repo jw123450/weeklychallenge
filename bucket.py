@@ -7,7 +7,7 @@ def buckets(orig, length):
 			fs = (' ').join(f)
 			fl.append(fs)
 			f = []; c = -1;
-		elif (length - c) > len(n):
+		if (length - c) > len(n):
 			f.append(n)
 			c += len(n)
 		else:
