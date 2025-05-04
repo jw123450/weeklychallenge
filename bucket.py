@@ -11,7 +11,7 @@ def buckets(orig, length):
 			f.append(n)
 			c += len(n)
 		else:
-			print('Not possible to bucket')
+			print(fl); return None
 	fs = (' ').join(f)
 	fl.append(fs)
 	print(fl)
@@ -20,3 +20,4 @@ buckets("she sells sea shells by the sea", 10)
 buckets("the mouse jumped over the cheese", 7)
 buckets("fairy dust coated the air", 20)
 buckets("a b c d e", 2)
+buckets("really long things", 2)
