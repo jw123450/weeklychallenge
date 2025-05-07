@@ -1,6 +1,6 @@
 def noYelling(s):
 	n = s[-1]
-	while (s[-1] == '!') or (s[-1] == '?'):
+	while s[-1] == n:
 		s = s[:-1]
 	s = s+n
 	print(s)
