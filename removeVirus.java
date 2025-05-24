@@ -2,7 +2,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
 public class removeVirus {
 	public static String rv(String PCfiles) {
 		PCfiles = PCfiles.replaceFirst("^PC Files: ", "");
@@ -24,7 +23,6 @@ public class removeVirus {
 		}
 	}
 	public static void main(String[] args) {
-		removeVirus testing = new removeVirus();
 		System.out.println(removeVirus.rv("PC Files: spotifysetup.exe, virus.exe, dog.jpg"));
 		System.out.println(removeVirus.rv("PC Files: antivirus.exe, cat.pdf, lethalmalware.exe, dangerousvirus.exe"));
 		System.out.println(removeVirus.rv("PC Files: notvirus.exe, funnycat.gif"));
